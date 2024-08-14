@@ -1,0 +1,24 @@
+#.function to get smallest and largest element in array 
+def find_min_max(numbers):
+    if not numbers:  # Check if the list is empty
+        return None, None  # Return None for both if the list is empty
+    
+    # Initialize the smallest and largest variables with the first element of the list
+    smallest = largest = numbers[0]
+    
+    # Iterate through the list to find the smallest and largest numbers
+    for num in numbers[1:]:
+        if num < smallest:
+            smallest = num
+        if num > largest:
+            largest = num
+            
+    return smallest, largest
+
+
+# Example usage
+numbers = [34, 12, 56, 78, 23, 89, 5, 67]
+min_num, max_num = find_min_max(numbers)
+
+print("Smallest number:", min_num)
+print("Largest number:", max_num)
